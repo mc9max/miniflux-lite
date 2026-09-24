@@ -1,6 +1,6 @@
 {
   "icon": "https://files.catbox.moe/rc1oxq.svg",
-  "description": "Self-hosted RSS feed reader with Postgres \u2014 Fever/Google Reader API compatible",
+  "description": "Self-hosted RSS feed reader with Postgres — Fever/Google Reader API compatible",
   "variables": {
     "DATABASE_URL": "postgres://${{Postgres.PGUSER}}:${{Postgres.PGPASSWORD}}@${{Postgres.RAILWAY_PRIVATE_DOMAIN}}:5432/${{Postgres.PGDATABASE}}?sslmode=disable",
     "RUN_MIGRATIONS": "1",

@@ -1,7 +1,7 @@
 {
   "DATABASE_URL": {
     "type": "string",
-    "description": "PostgreSQL connection string \u2014 auto-wired from the Postgres companion service. Do not edit.",
+    "description": "PostgreSQL connection string — auto-wired from the Postgres companion service. Do not edit.",
     "defaultValue": "postgres://${{Postgres.PGUSER}}:${{Postgres.PGPASSWORD}}@${{Postgres.RAILWAY_PRIVATE_DOMAIN}}:5432/${{Postgres.PGDATABASE}}?sslmode=disable"
   },
   "RUN_MIGRATIONS": {
@@ -22,7 +22,7 @@
   },
   "ADMIN_PASSWORD": {
     "type": "string",
-    "description": "Admin password \u2014 MUST be at least 12 characters. Change immediately after first login.",
+    "description": "Admin password — MUST be at least 12 characters. Change immediately after first login.",
     "defaultValue": "change-me-12-chars",
     "isOptional": true
   },
