@@ -1,0 +1,14 @@
+{
+  "POSTGRES_DB": {
+    "value": "miniflux",
+    "description": "PostgreSQL database name."
+  },
+  "POSTGRES_USER": {
+    "value": "miniflux",
+    "description": "PostgreSQL user name."
+  },
+  "POSTGRES_PASSWORD": {
+    "value": "${{secret(16)}}",
+    "description": "PostgreSQL password \u2014 auto-generated on deploy."
+  }
+}

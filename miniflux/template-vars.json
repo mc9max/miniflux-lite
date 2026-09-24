@@ -1,0 +1,52 @@
+{
+  "DATABASE_URL": {
+    "type": "string",
+    "description": "PostgreSQL connection string \u2014 auto-wired from the Postgres companion service. Do not edit.",
+    "defaultValue": "postgres://${{Postgres.PGUSER}}:${{Postgres.PGPASSWORD}}@${{Postgres.RAILWAY_PRIVATE_DOMAIN}}:5432/${{Postgres.PGDATABASE}}?sslmode=disable"
+  },
+  "RUN_MIGRATIONS": {
+    "type": "string",
+    "description": "Run database migrations on startup. Set to 1 for first deploy.",
+    "defaultValue": "1"
+  },
+  "CREATE_ADMIN": {
+    "type": "string",
+    "description": "Create admin user on first run. Set to 1 for first deploy.",
+    "defaultValue": "1"
+  },
+  "ADMIN_USERNAME": {
+    "type": "string",
+    "description": "Admin username for the Miniflux web UI.",
+    "defaultValue": "admin",
+    "isOptional": true
+  },
+  "ADMIN_PASSWORD": {
+    "type": "string",
+    "description": "Admin password \u2014 MUST be at least 12 characters. Change immediately after first login.",
+    "defaultValue": "change-me-12-chars",
+    "isOptional": true
+  },
+  "BASE_URL": {
+    "type": "string",
+    "description": "Public URL of your Miniflux instance. Used for feed discovery and redirects.",
+    "defaultValue": "https://${{RAILWAY_PUBLIC_DOMAIN}}"
+  },
+  "POLLING_FREQUENCY": {
+    "type": "string",
+    "description": "How often (in minutes) Miniflux fetches feeds. Default: 60 minutes.",
+    "defaultValue": "60",
+    "isOptional": true
+  },
+  "BATCH_SIZE": {
+    "type": "string",
+    "description": "Number of feeds to fetch in one batch. Default: 100.",
+    "defaultValue": "100",
+    "isOptional": true
+  },
+  "MINIFLUX_WEBHOOK_URL": {
+    "type": "string",
+    "description": "Optional: webhook URL for new entries (e.g., Marketing Bot Lite endpoint). Leave empty to disable.",
+    "defaultValue": "",
+    "isOptional": true
+  }
+}

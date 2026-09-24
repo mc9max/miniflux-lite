@@ -1,0 +1,9 @@
+{
+  "miniflux": {
+    "private": "${{miniflux.RAILWAY_PRIVATE_DOMAIN}}",
+    "public": "${{miniflux.RAILWAY_PUBLIC_DOMAIN}}"
+  },
+  "Postgres": {
+    "private": "${{Postgres.RAILWAY_PRIVATE_DOMAIN}}"
+  }
+}
