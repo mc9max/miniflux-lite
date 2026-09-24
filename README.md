@@ -63,6 +63,41 @@ POST /v1/entries/{id}/bookmark
 - **Postgres** — managed by Railway, auto-wired to this service
 - **Volume** — Postgres data persists at `/var/lib/postgresql/data`
 
+## Deploy and Host
+
+Deploy Miniflux Lite on Railway with one click. No server setup, no Docker knowledge required — just click the button and your RSS reader is live.
+
+## About Hosting
+
+Railway handles the infrastructure: containers, networking, SSL, and persistent Postgres storage. You focus on reading feeds, not managing servers.
+
+## Why Deploy
+
+- **Zero maintenance** — Railway manages updates, scaling, and monitoring
+- **Postgres included** — no external database setup needed
+- **Auto-deploy** — push to GitHub, Railway rebuilds automatically
+- **Hobby tier friendly** — 120MB RAM total, runs on $4/month plan
+
+## Common Use Cases
+
+- **Personal RSS aggregator** — track all your favorite blogs and news sites
+- **AI agent feeds** — feed content to AI pipelines and summarizers
+- **Marketing automation** — auto-tweet new posts via webhook integration
+- **Team news digest** — shared feed collection for small teams
+- **Content research** — monitor industry blogs and competitor updates
+
+## Dependencies for
+
+- **Miniflux** — Go-based RSS reader (prebuilt Docker image)
+- **PostgreSQL** — persistent storage for feeds, entries, and user data
+- **Railway volume** — 5GB persistent storage for Postgres data
+
+### Deployment Dependencies
+
+- **GitHub repo** — source code for auto-deploy (optional)
+- **Railway account** — Hobby plan recommended for production use
+- **Custom domain** — optional, Railway provides a default domain
+
 ## Deployment
 
 [![Deploy to Railway](https://railway.app/button.svg)](https://railway.com/deploy/miniflux-lite)
