@@ -1,0 +1,7 @@
+{
+  "deploy": {
+    "startCommand": "/usr/bin/miniflux",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "icon": "https://files.catbox.moe/rc1oxq.svg",
+  "description": "Self-hosted RSS feed reader with Postgres — Fever/Google Reader API compatible",
+  "variables": {
+    "DATABASE_URL": "postgres://${{Postgres.PGUSER}}:${{Postgres.PGPASSWORD}}@${{Postgres.RAILWAY_PRIVATE_DOMAIN}}:5432/${{Postgres.PGDATABASE}}?sslmode=disable",
+    "RUN_MIGRATIONS": "1",
+    "CREATE_ADMIN": "1",
+    "ADMIN_USERNAME": "admin",
+    "ADMIN_PASSWORD": "change-me-12-chars",
+    "BASE_URL": "https://${{RAILWAY_PUBLIC_DOMAIN}}",
+    "POLLING_FREQUENCY": "60",
+    "BATCH_SIZE": "100",
+    "MINIFLUX_WEBHOOK_URL": ""
+  }
+}
