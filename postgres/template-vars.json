@@ -13,5 +13,10 @@
     "type": "string",
     "description": "PostgreSQL password \u2014 auto-generated on deploy.",
     "defaultValue": "${{secret(16)}}"
+  },
+  "PGDATA": {
+    "type": "string",
+    "description": "Data directory. Must be a SUBDIRECTORY of the volume mount (lost+found at mount root breaks initdb). Do not change.",
+    "defaultValue": "/var/lib/postgresql/data/pgdata"
   }
 }
