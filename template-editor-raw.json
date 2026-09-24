@@ -1,43 +1,60 @@
 {
-  "DATABASE_URL": {
-    "value": "postgres://${{Postgres.PGUSER}}:${{Postgres.PGPASSWORD}}@${{Postgres.RAILWAY_PRIVATE_DOMAIN}}:5432/${{Postgres.PGDATABASE}}?sslmode=disable",
-    "description": "PostgreSQL connection string — auto-wired from the Postgres companion service. Do not edit."
+  "miniflux": {
+    "DATABASE_URL": {
+      "value": "postgres://${{Postgres.PGUSER}}:${{Postgres.PGPASSWORD}}@${{Postgres.RAILWAY_PRIVATE_DOMAIN}}:5432/${{Postgres.PGDATABASE}}?sslmode=disable",
+      "description": "PostgreSQL connection string \u2014 auto-wired from the Postgres companion service. Do not edit."
+    },
+    "RUN_MIGRATIONS": {
+      "value": "1",
+      "description": "Run database migrations on startup. Set to 1 for first deploy."
+    },
+    "CREATE_ADMIN": {
+      "value": "1",
+      "description": "Create admin user on first run. Set to 1 for first deploy."
+    },
+    "ADMIN_USERNAME": {
+      "value": "admin",
+      "description": "Admin username for the Miniflux web UI.",
+      "isOptional": true
+    },
+    "ADMIN_PASSWORD": {
+      "value": "change-me-12-chars",
+      "description": "Admin password \u2014 MUST be at least 12 characters. Change immediately after first login.",
+      "isOptional": true
+    },
+    "BASE_URL": {
+      "value": "https://${{RAILWAY_PUBLIC_DOMAIN}}",
+      "description": "Public URL of your Miniflux instance. Used for feed discovery and redirects."
+    },
+    "POLLING_FREQUENCY": {
+      "value": "60",
+      "description": "How often (in minutes) Miniflux fetches feeds. Default: 60 minutes.",
+      "isOptional": true
+    },
+    "BATCH_SIZE": {
+      "value": "100",
+      "description": "Number of feeds to fetch in one batch. Default: 100.",
+      "isOptional": true
+    },
+    "MINIFLUX_WEBHOOK_URL": {
+      "value": "",
+      "description": "Optional: webhook URL for new entries (e.g., Marketing Bot Lite endpoint). Leave empty to disable.",
+      "isOptional": true
+    }
   },
-  "RUN_MIGRATIONS": {
-    "value": "1",
-    "description": "Run database migrations on startup. Set to 1 for first deploy."
-  },
-  "CREATE_ADMIN": {
-    "value": "1",
-    "description": "Create admin user on first run. Set to 1 for first deploy."
-  },
-  "ADMIN_USERNAME": {
-    "value": "admin",
-    "description": "Admin username for the Miniflux web UI.",
-    "isOptional": true
-  },
-  "ADMIN_PASSWORD": {
-    "value": "change-me-12-chars",
-    "description": "Admin password — MUST be at least 12 characters. Change immediately after first login.",
-    "isOptional": true
-  },
-  "BASE_URL": {
-    "value": "https://${{RAILWAY_PUBLIC_DOMAIN}}",
-    "description": "Public URL of your Miniflux instance. Used for feed discovery and redirects."
-  },
-  "POLLING_FREQUENCY": {
-    "value": "60",
-    "description": "How often (in minutes) Miniflux fetches feeds. Default: 60 minutes.",
-    "isOptional": true
-  },
-  "BATCH_SIZE": {
-    "value": "100",
-    "description": "Number of feeds to fetch in one batch. Default: 100.",
-    "isOptional": true
-  },
-  "MINIFLUX_WEBHOOK_URL": {
-    "value": "",
-    "description": "Optional: webhook URL for new entries (e.g., Marketing Bot Lite endpoint). Leave empty to disable.",
-    "isOptional": true
+  "Postgres": {
+    "POSTGRES_DB": {
+      "value": "miniflux",
+      "description": "PostgreSQL database name."
+    },
+    "POSTGRES_USER": {
+      "value": "miniflux",
+      "description": "PostgreSQL user name."
+    },
+    "POSTGRES_PASSWORD": {
+      "value": "miniflux-pass",
+      "description": "PostgreSQL password \u2014 auto-generated if left empty.",
+      "isOptional": true
+    }
   }
 }
