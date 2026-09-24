@@ -2,7 +2,7 @@
   "DATABASE_URL": {
     "type": "string",
     "description": "PostgreSQL connection string — auto-wired from the Postgres companion service. Do not edit.",
-    "defaultValue": "postgres://${{Postgres.PGUSER}}:${{Postgres.PGPASSWORD}}@${{Postgres.RAILWAY_PRIVATE_DOMAIN}}:5432/${{Postgres.PGDATABASE}}?sslmode=disable"
+    "defaultValue": "postgres://${{Postgres.POSTGRES_USER}}:${{Postgres.POSTGRES_PASSWORD}}@${{Postgres.RAILWAY_PRIVATE_DOMAIN}}:5432/${{Postgres.POSTGRES_DB}}?sslmode=disable"
   },
   "RUN_MIGRATIONS": {
     "type": "string",
